@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Chart from './Chart';
 import bear from '../images/bear.svg';
 import home from '../images/home.svg';
 import world from '../images/world.svg';
@@ -88,6 +89,7 @@ const Result = ({data}) => (
         <p>{data.monthlyExpense * 12}</p>
       </Item>
     </Comparison>
+    <Chart data={data} />
     <Disclaimer>
       <p>Disclaimer: This is an tl;dr/eli5 version of how much emergency fund one should have. None of the content here must be taken for legal financial advice.</p>
     </Disclaimer>

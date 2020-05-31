@@ -80,7 +80,7 @@ const Landing = (props) => (
     {props.state.specific &&
       <>
       <label className="visually-hidden" htmlFor="food">Food budget</label>
-      <input required onChange={props.handleChange} type="number" id="food" name="food" placeholder="Your food budget here..." />
+      <input autoFocus required onChange={props.handleChange} type="number" id="food" name="food" placeholder="Your food budget here..." />
       <label className="visually-hidden" htmlFor="bills">Bills</label>
       <input required onChange={props.handleChange} type="number" id="bills" name="bills" placeholder="Your bills spending here..." />
       <label className="visually-hidden" htmlFor="accommodation">Accommodation budget</label>
