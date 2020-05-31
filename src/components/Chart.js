@@ -25,8 +25,11 @@ const Chart = (props) => {
   const options = {
       plugins: {
           colorschemes: {
-              scheme: 'brewer.Paired12'
+              scheme: 'brewer.Reds5'
           }
+      },
+      legend: {
+        position: 'right'
       }
   };
 

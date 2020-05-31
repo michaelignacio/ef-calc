@@ -39,13 +39,27 @@ const Form = styled.form`
     transition: all .3s;
     font-weight: 800;
     text-transform: uppercase;
-    color: #000;
-    border-color: #ddd;
+    // color: #000;
+    // border-color: #ddd;
+    background-color: #cc0000;
+    color: #fff;
 
     &:hover {
-      background-color: #CC0000;
-      color: #fff;
+      filter: brightness(110%);
+      // background-color: #CC0000;
+      // color: #fff;
       cursor: pointer;
+      // border-color: transparent;
+    }
+  }
+
+  button {
+    background-color: #fff;
+    color: #000;
+
+    &:hover {
+      background-color: #cc0000;
+      color: #fff;
     }
   }
 
