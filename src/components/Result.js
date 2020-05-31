@@ -41,7 +41,7 @@ const Wrapper = styled.div`
   align-items: center;
 
   .title {
-    margin-bottom: 5em;
+    margin-bottom: 1em;
   }
 `
 
@@ -67,7 +67,6 @@ const Disclaimer = styled.div`
 
 const Result = ({data}) => (
   <Wrapper>
-    {console.log(data)}
     <h1 className="title">Roughly, your emergency fund should be worth...</h1>
     <Comparison>
       <Item>
