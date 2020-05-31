@@ -65,27 +65,28 @@ const Disclaimer = styled.div`
   }
 `
 
-const Result = ({ amount }) => (
+const Result = ({data}) => (
   <Wrapper>
+    {console.log(data)}
     <h1 className="title">Roughly, your emergency fund should be worth...</h1>
     <Comparison>
       <Item>
         <img src={bear} alt=""/>
         <h1>Lite</h1>
         <p>Worth three months</p>
-        <p>{amount * 3}</p>
+        <p>{data.monthlyExpense * 3}</p>
       </Item>
       <Item>
         <img src={home} alt=""/>
         <h1>Hiatus</h1>
         <p>Worth six months</p>
-        <p>{amount * 6}</p>
+        <p>{data.monthlyExpense * 6}</p>
       </Item>
       <Item>
         <img src={world} alt=""/>
         <h1>Pandemic</h1>
         <p>Worth one year</p>
-        <p>{amount * 12}</p>
+        <p>{data.monthlyExpense * 12}</p>
       </Item>
     </Comparison>
     <Disclaimer>

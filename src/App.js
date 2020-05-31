@@ -14,7 +14,8 @@ class App extends Component {
       bills: 0,
       accommodation: 0,
       transpo: 0,
-      pocketMoney: 0
+      pocketMoney: 0,
+      sumOfExpenses: 0
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -22,9 +23,17 @@ class App extends Component {
   }
 
   handleChange(event) {
-    this.setState({
-      monthlyExpense: event.target.value
-    });
+    if (this.state.specific) {
+      this.setState({[event.target.name]: event.target.value }, ()=>{
+        this.setState({
+          monthlyExpense: +this.state.food + +this.state.bills + +this.state.accommodation + +this.state.transpo + +this.state.pocketMoney
+        })
+      });
+    } else {
+      this.setState({
+        monthlyExpense: event.target.value
+      });
+    }
   }
 
   handleSubmit(event) {
@@ -36,7 +45,6 @@ class App extends Component {
 
   handleSpecificity(event) {
     event.preventDefault();
-    console.log('test');
     this.setState({
       specific: true
     });
@@ -54,7 +62,7 @@ class App extends Component {
           />
           :
           <Result
-            amount={this.state.monthlyExpense}
+            data={this.state}
           />
         }
       </Container>

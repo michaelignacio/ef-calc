@@ -63,7 +63,7 @@ const Form = styled.form`
 const Landing = (props) => (
   <Form onSubmit={props.handleSubmit}>
     <label htmlFor="amount">
-      How much is your monthly expense?
+      How much are your monthly expenses?
     </label>
     {!props.state.specific &&
       <input
@@ -80,15 +80,15 @@ const Landing = (props) => (
     {props.state.specific &&
       <>
       <label className="visually-hidden" htmlFor="food">Food budget</label>
-      <input type="number" id="food" name="food" placeholder="Your food budget here..." />
+      <input onChange={props.handleChange} type="number" id="food" name="food" placeholder="Your food budget here..." />
       <label className="visually-hidden" htmlFor="bills">Bills</label>
-      <input type="number" id="bills" name="bills" placeholder="Your bills spending here..." />
+      <input onChange={props.handleChange} type="number" id="bills" name="bills" placeholder="Your bills spending here..." />
       <label className="visually-hidden" htmlFor="accommodation">Accommodation budget</label>
-      <input type="number" id="accommodation" name="accommodation" placeholder="Your accommodation budget here..." />
+      <input onChange={props.handleChange} type="number" id="accommodation" name="accommodation" placeholder="Your accommodation budget here..." />
       <label className="visually-hidden" htmlFor="transpo">Transpo budget</label>
-      <input type="number" id="transpo" name="transpo" placeholder="Your transpo budget here..." />
+      <input onChange={props.handleChange} type="number" id="transpo" name="transpo" placeholder="Your transpo budget here..." />
       <label className="visually-hidden" htmlFor="pocketMoney">Pocket money</label>
-      <input type="number" id="pocketMoney" name="pocketMoney" placeholder="Your pocket money here..." />
+      <input onChange={props.handleChange} type="number" id="pocketMoney" name="pocketMoney" placeholder="Your pocket money here..." />
       </>
     }
     <div className="d-flex">
