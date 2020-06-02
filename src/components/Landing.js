@@ -6,6 +6,14 @@ const Form = styled.form`
   flex-direction: column;
   max-width: 600px;
 
+  .button-group {
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      flex-direction; row;
+    }
+  }
+
   label {
     font-size: 2em;
     margin-bottom: 1em;
@@ -15,7 +23,11 @@ const Form = styled.form`
     display: flex;
 
     button {
-      margin-left: 10px;
+      margin-left: 0;
+
+      @media (min-width: 768px) {
+        margin-left: 10px;
+      }
     }
 
     button,
@@ -105,7 +117,7 @@ const Landing = (props) => (
       <input required onChange={props.handleChange} type="number" id="pocketMoney" name="pocketMoney" placeholder="Your pocket money here..." />
       </>
     }
-    <div className="d-flex">
+    <div className="d-flex button-group">
       <input type="submit" value="Continue" />
       {!props.state.specific &&
         <button onClick={props.handleSpecificity}>
