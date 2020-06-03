@@ -39,6 +39,11 @@ const Button = styled.a`
 
 const Comparison = styled.div`
   display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 
   div {
     flex: 1;
@@ -93,6 +98,7 @@ const Disclaimer = styled.div`
   bottom: 0;
   padding-bottom: 20px;
   background-color: #fff;
+  padding-top: 20px;
 
   p {
     color: #999;
