@@ -15,7 +15,8 @@ class App extends Component {
       accommodation: 0,
       transpo: 0,
       pocketMoney: 0,
-      sumOfExpenses: 0
+      sumOfExpenses: 0,
+      firstTime: true
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);

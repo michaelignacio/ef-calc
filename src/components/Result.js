@@ -163,7 +163,12 @@ const Result = ({data}) => (
       <Button href="/">Start Over?</Button>
       <p>
         <small>
-          {tips[Math.floor(Math.random() * tips.length)]}
+          {
+            /*data.firstTime ?
+            tips[0]
+            :*/
+            tips[Math.floor(Math.random() * tips.length)]
+          }
         </small>
       </p>
     </Startover>
