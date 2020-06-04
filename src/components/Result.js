@@ -13,10 +13,14 @@ const tips = [
 
 const Startover = styled.div`
   text-align: center;
-  margin: 50px 0 20px;
+  margin: 50px 0 100px;
 
   p {
     margin-top: 25px;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 20px;
   }
 `
 
@@ -40,9 +44,12 @@ const Button = styled.a`
 const Comparison = styled.div`
   display: flex;
   flex-direction: column;
+  // margin-top: 40px;
 
   @media (min-width: 768px) {
+    padding: unset;
     flex-direction: row;
+    margin-top: 0;
   }
 
   div {
@@ -90,19 +97,22 @@ const Wrapper = styled.div`
 `
 
 const Item = styled.div`
-  margin: 0 50px;
+  margin: 20px 50px;
+
+  @media (min-width: 768px) {
+    margin: 0 50px;
+  }
 `
 
 const Disclaimer = styled.div`
   position: fixed;
   bottom: 0;
-  padding-bottom: 20px;
   background-color: #fff;
-  padding-top: 20px;
+  padding: 20px;
+  font-size: .75em;
 
   p {
     color: #999;
-    font-size: .9em;
     margin: 0;
     text-align: center;
   }
@@ -113,7 +123,15 @@ const Disclaimer = styled.div`
     margin-bottom: 5px;
     text-transform: uppercase;
   }
+
+  @media (min-width: 768px) {
+    font-size: .9em;
+  }
 `
+
+const Currency = (money) => {
+  return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'PHP' } ).format(money);
+}
 
 const Result = ({data}) => (
   <Wrapper>
@@ -126,19 +144,19 @@ const Result = ({data}) => (
         <img src={bear} alt=""/>
         <h1>Lite</h1>
         <p>Worth three months</p>
-        <p>{data.monthlyExpense * 3}</p>
+        <p>{Currency(data.monthlyExpense * 3)}</p>
       </Item>
       <Item>
         <img src={home} alt=""/>
         <h1>Hiatus</h1>
         <p>Worth six months</p>
-        <p>{data.monthlyExpense * 6}</p>
+        <p>{Currency(data.monthlyExpense * 6)}</p>
       </Item>
       <Item>
         <img src={world} alt=""/>
         <h1>Pandemic</h1>
         <p>Worth one year</p>
-        <p>{data.monthlyExpense * 12}</p>
+        <p>{Currency(data.monthlyExpense * 12)}</p>
       </Item>
     </Comparison>
     <Startover>

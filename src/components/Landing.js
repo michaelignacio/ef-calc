@@ -5,6 +5,12 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   max-width: 600px;
+  height: 90vh;
+  justify-content: center;
+
+  @media (min-width: 768px) {
+    height: unset;
+  }
 
   .button-group {
     flex-direction: column;
