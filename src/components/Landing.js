@@ -32,7 +32,7 @@ const Form = styled.form`
       margin-left: 0;
 
       @media (min-width: 768px) {
-        margin-left: 10px;
+        // margin-left: 10px;
       }
     }
 
