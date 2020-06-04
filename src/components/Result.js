@@ -173,7 +173,7 @@ const Result = ({data}) => (
       </p>
     </Startover>
     <Disclaimer>
-      <p>Disclaimer: This is an tl;dr/eli5 version of how much emergency fund one should have. None of the content here must be taken for legal financial advice.</p>
+      <p>Disclaimer: None of the content here must be taken for legal financial advice.</p>
     </Disclaimer>
   </Wrapper>
 );
