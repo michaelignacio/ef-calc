@@ -115,6 +115,10 @@ const Disclaimer = styled.div`
     color: #999;
     margin: 0;
     text-align: center;
+
+    a {
+      color: #999;
+    }
   }
 
   .disclaimer-title {
