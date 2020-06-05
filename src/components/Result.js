@@ -173,7 +173,7 @@ const Result = ({data}) => (
       </p>
     </Startover>
     <Disclaimer>
-      <p>Disclaimer: None of the content here must be taken for legal financial advice.</p>
+      <p>Disclaimer: None of the content here must be taken for legal financial advice. <a href="https://github.com/michaelignacio/ef-calc" target="_blank" rel="noopener noreferrer">Fork me</a></p>
     </Disclaimer>
   </Wrapper>
 );
