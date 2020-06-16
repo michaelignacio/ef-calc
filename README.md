@@ -3,7 +3,7 @@ Not sure how much your emergency fund should be?
 
 Access the EF Calculator [here](https://ef-calc.now.sh/).
 
-This is also shared on the PHInvest subreddit: [link](https://www.reddit.com/r/phinvest/comments/gwdwkr/not_sure_how_much_your_emergency_fund_should_be/)
+This is also shared on the PHInvest subreddit - [see discussion here](https://www.reddit.com/r/phinvest/comments/gwdwkr/not_sure_how_much_your_emergency_fund_should_be/).
 
 ## Quick start
 
